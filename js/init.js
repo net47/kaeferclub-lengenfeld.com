@@ -37,9 +37,9 @@ jQuery(document).ready(function(){
 // -----------------------------------------------------
 
 function erling_tm_modalbox(){
-	/*"use strict";
+	"use strict";
 	
-	jQuery('.erling_tm_all_wrap').prepend('<div class="erling_tm_modalbox"><div class="box_inner"><div class="close"><a href="#"><i class="icon-cancel"></i></a></div><div class="description_wrap"></div></div></div>');*/
+	jQuery('.erling_tm_all_wrap').prepend('<div class="erling_tm_modalbox"><div class="box_inner"><div class="close"><a href="#"><i class="icon-cancel"></i></a></div><div class="description_wrap"></div></div></div>');
 }
 
 // -------------------------------------------------
@@ -143,14 +143,14 @@ function erling_tm_trigger_menu(){
 // -------------------------------------------------
 
 function erling_tm_modalbox_news(){
-	/*
+	
 	"use strict";
 	
 	var modalBox		= jQuery('.erling_tm_modalbox');
 	var button			= jQuery('.erling_tm_news .erling_tm_full_link, .erling_tm_news .news_list ul li .title a');
 	var closePopup		= modalBox.find('.close');
 	
-	button.on('click',function(){
+	/*button.on('click',function(){
 		var element 	= jQuery(this);
 		var parent 		= element.closest('li');
 		var content 	= parent.find('.news_hidden_details').html();
@@ -170,9 +170,9 @@ function erling_tm_modalbox_news(){
 		modalBox.removeClass('opened');
 		modalBox.find('.description_wrap').html('');
 		return false;
-	});
+	});*/
 }
-*/
+
 // -------------------------------------------------
 // -------------  MODALBOX PORTFOLIO  --------------
 // -------------------------------------------------
