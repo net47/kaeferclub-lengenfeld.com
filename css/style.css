@@ -1639,6 +1639,9 @@ h6 { font-size: 16px; }
 }
 .copyright {
 	font-size: 0.7rem;
+	position: absolute;
+	bottom: 15px;
+	vertical-align: bottom;
 }
 
 /*---------------------------------------------------*/
@@ -1711,6 +1714,10 @@ h6 { font-size: 16px; }
 	.erling_tm_news .news_list ul li .title h3{font-size: 18px;}
 	.erling_tm_portfolio .portfolio_list .details h3{font-size: 18px;}
 	.erling_tm_experience .box .occ h3{font-size: 16px;}
+	.copyright {
+		position: relative;
+		text-align: center;
+	}
 }
 @media (max-width: 1040px) {
 	.erling_tm_header{display: none;}
