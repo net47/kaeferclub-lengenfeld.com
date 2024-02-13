@@ -1715,8 +1715,9 @@ h6 { font-size: 16px; }
 	.erling_tm_portfolio .portfolio_list .details h3{font-size: 18px;}
 	.erling_tm_experience .box .occ h3{font-size: 16px;}
 	.copyright {
-		position: relative;
+		position: static;
 		text-align: center;
+		margin-bottom: 10px;
 	}
 }
 @media (max-width: 1040px) {
