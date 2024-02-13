@@ -37,9 +37,9 @@ jQuery(document).ready(function(){
 // -----------------------------------------------------
 
 function erling_tm_modalbox(){
-	"use strict";
+	/*"use strict";
 	
-	jQuery('.erling_tm_all_wrap').prepend('<div class="erling_tm_modalbox"><div class="box_inner"><div class="close"><a href="#"><i class="icon-cancel"></i></a></div><div class="description_wrap"></div></div></div>');
+	jQuery('.erling_tm_all_wrap').prepend('<div class="erling_tm_modalbox"><div class="box_inner"><div class="close"><a href="#"><i class="icon-cancel"></i></a></div><div class="description_wrap"></div></div></div>');*/
 }
 
 // -------------------------------------------------
@@ -143,7 +143,7 @@ function erling_tm_trigger_menu(){
 // -------------------------------------------------
 
 function erling_tm_modalbox_news(){
-	
+	/*
 	"use strict";
 	
 	var modalBox		= jQuery('.erling_tm_modalbox');
@@ -172,7 +172,7 @@ function erling_tm_modalbox_news(){
 		return false;
 	});
 }
-
+*/
 // -------------------------------------------------
 // -------------  MODALBOX PORTFOLIO  --------------
 // -------------------------------------------------
