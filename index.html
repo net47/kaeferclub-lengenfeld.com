@@ -336,7 +336,7 @@
 
 							<iframe
 								width="100%"
-								height="300"
+								height="400"
 								style="border:0"
 								loading="lazy"
 								allowfullscreen
@@ -345,30 +345,16 @@
 							</iframe>
 
 							<p>&nbsp;</p>
-							<p><strong>Kontaktformular</strong></p>
-							<p>&nbsp;</p>
 
-							<div class="form_wrapper">
-								<form id="contactForm" action="https://formspree.io/f/xoqgdqzb" method="POST">
-									<input type="hidden" name="_language" value="de" />
-									<ul>
-										<li>
-											<input type="text" placeholder="Name" name="name" class="cf-form-control"/>
-											<span></span>
-										</li>
-										<li>
-											<input type="email" placeholder="Email" name="email" class="cf-form-control" />
-											<span></span>
-										</li>
-										<li id="text-area-w">
-											<textarea placeholder="Nachricht" name="message" class="cf-form-control"></textarea>
-										</li>
-									</ul>
-									<div class="erling_tm_button">
-										<button type="submit" id="send_message" href="#">Nachricht senden</button>												
-									</div>
-								</form>
-							</div>
+							<script>
+								function sendEmail() 
+								{
+									window.location = "mailto:kaeferclub@gmx.net";
+								}
+							</script>
+							<p><div class="erling_tm_button" onclick="sendEmail();">
+								<button type="submit" id="send_message" href="#">Sende uns eine E-Mail!</button>
+							</div></p>
 
 						</div>
 					</div>

@@ -1612,6 +1612,34 @@ h6 { font-size: 16px; }
 	width: 100%;
 }
 
+.erling_tm_contact a{
+	color:#721c24;
+	text-decoration: none;
+}
+.erling_tm_contact a:hover{
+	text-decoration: none;
+}
+.text_hover_effect{
+	position: relative;
+	display: inline;
+	background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size .5s;
+}
+.text_hover_effect:after{
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	right: -5px;
+	bottom: -5px;
+}
+.text_hover_effect:hover{
+	background-size: 100% 1px;
+}
+
 /*---------------------------------------------------*/
 /*	12) ERLING COPYRIGHT
 /*---------------------------------------------------*/
