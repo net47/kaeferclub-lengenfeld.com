@@ -11,16 +11,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Create directory
-        run: mkdir -p fotogalerie
+        run: mkdir -p ${{ github.workspace }}/fotogalerie
 
-      - name: Clear old files
-        run: rm -rf fotogalerie/*
+      - name: Clear old files safely
+        run: |
+            if [ -d "${{ github.workspace }}/fotogalerie" ]; then
+                rm -rf ${{ github.workspace }}/fotogalerie/*
+            fi
 
-      - name: Set up Docker
+      - name: Generate the gallery
         run: |
           docker run -t \
             -v ${{ github.workspace }}/css/gallery-custom.css:/custom.css:ro \
