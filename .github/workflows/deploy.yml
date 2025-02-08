@@ -18,7 +18,7 @@ jobs:
           mkdir -p output
           docker run -t \
             -v ${{ github.workspace }}/css/gallery-custom.css:/custom.css:ro \
-            -v ${{ github.workspace }}/fg-input/input:/input:ro \
+            -v ${{ github.workspace }}/fg-input:/input:ro \
             -v ${{ github.workspace }}/fotogalerie:/output \
             -u 1000:1000 \
             ghcr.io/thumbsup/thumbsup \
