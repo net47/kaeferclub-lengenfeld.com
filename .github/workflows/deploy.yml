@@ -3,7 +3,7 @@ name: Generate gallery and deploy site
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:  # Allows manual runs
 
 jobs:
@@ -33,6 +33,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages
-          folder: output
+          branch: master
+          folder: .
           clean: true
