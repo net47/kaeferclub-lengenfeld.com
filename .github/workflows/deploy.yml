@@ -6,6 +6,11 @@ on:
       - master
   workflow_dispatch:  # Allows manual runs
 
+permissions:
+  contents: write      # Needed for committing changes
+  pages: write         # Required for deploying GitHub Pages
+  id-token: write      # Required for authentication
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -45,19 +50,10 @@ jobs:
           git push origin master
 
       - name: Upload artifact for GitHub Pages
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
-
-
-
-    #   - name: Deploy to GitHub Pages
-    #     uses: JamesIves/github-pages-deploy-action@v4
-    #     with:
-    #       branch: master
-    #       folder: .
-    #       clean: true
+        uses: actions/deploy-pages@v4
