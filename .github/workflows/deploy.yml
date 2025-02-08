@@ -13,6 +13,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Create directory
+        run: mkdir -p fotogalerie
+
+      - name: Clear old files
+        run: rm -rf fotogalerie/*
+
       - name: Set up Docker
         run: |
           mkdir -p output
