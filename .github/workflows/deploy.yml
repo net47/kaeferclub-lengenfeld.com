@@ -1,0 +1,32 @@
+name: Generate gallery and deploy site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker
+        run: |
+          mkdir -p output
+          docker run -t \
+            -v ${{ github.workspace }}/css/gallery-custom.css:/custom.css:ro \
+            -v ${{ github.workspace }}/fg-input/input:/input:ro \
+            -v ${{ github.workspace }}/fotogalerie:/output \
+            -u 1000:1000 \
+            ghcr.io/thumbsup/thumbsup \
+            thumbsup --input /input --output /output --title "VW Käferclub Lengenfeld" --locale "de" --theme cards --theme-style /custom.css --photo-quality "100" --video-quality "100" --home-album-name "Fotogalerie" --sort-albums-by "start-date" --sort-albums-direction "desc" --footer "Alle Bilder auf dieser Webseite unterliegen dem Urheberrecht von VW Käferclub Lengenfeld."
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: output
+          clean: true
