@@ -21,7 +21,6 @@ jobs:
 
       - name: Set up Docker
         run: |
-          mkdir -p output
           docker run -t \
             -v ${{ github.workspace }}/css/gallery-custom.css:/custom.css:ro \
             -v ${{ github.workspace }}/fg-input:/input:ro \
