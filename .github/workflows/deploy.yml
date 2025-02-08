@@ -40,7 +40,7 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add fotogalerie
+          git add -f fotogalerie
           git commit -m "Update gallery [skip ci]" || echo "No changes to commit"
           git push origin master
 
