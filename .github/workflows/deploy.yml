@@ -27,7 +27,7 @@ jobs:
             -v ${{ github.workspace }}/fg-input:/input:ro \
             -v ${{ github.workspace }}/fotogalerie:/output \
             -u 1000:1000 \
-            ghcr.io/thumbsup/thumbsup \
+            ghcr.io/thumbsup/thumbsup:2.18.0 \
             thumbsup --input /input --output /output --title "VW Käferclub Lengenfeld" --locale "de" --theme cards --theme-style /custom.css --photo-quality "100" --video-quality "100" --home-album-name "Fotogalerie" --sort-albums-by "start-date" --sort-albums-direction "desc" --footer "Alle Bilder auf dieser Webseite unterliegen dem Urheberrecht von VW Käferclub Lengenfeld."
 
       - name: Deploy to GitHub Pages
