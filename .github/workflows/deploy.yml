@@ -15,7 +15,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Create directory
-        run: mkdir -p ${{ github.workspace }}/fotogalerie
+        run: mkdir -p ${{ github.workspace }}/fotogalerie && ls -la ${{ github.workspace }}
+
+      - name: Ensure directory is writable
+        run: chmod -R 777 ${{ github.workspace }}/fotogalerie
 
       - name: Clear old files safely
         run: |
@@ -32,6 +35,14 @@ jobs:
             -u $(id -u):$(id -g) \
             ghcr.io/thumbsup/thumbsup:2.18.0 \
             thumbsup --input /input --output /output --title "VW Käferclub Lengenfeld" --locale "de" --theme cards --theme-style /custom.css --photo-quality "100" --video-quality "100" --home-album-name "Fotogalerie" --sort-albums-by "start-date" --sort-albums-direction "desc" --footer "Alle Bilder auf dieser Webseite unterliegen dem Urheberrecht von VW Käferclub Lengenfeld."
+
+      - name: Commit and push updated gallery
+        run: |
+            git config --global user.name "GitHub Actions"
+            git config --global user.email "actions@github.com"
+            git add fotogalerie
+            git commit -m "Update gallery [skip ci]" || echo "No changes to commit"
+            git push origin master
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
