@@ -417,6 +417,21 @@
 <script src="js/contact.form.js"></script>
 <script src="js/init.js"></script>
 <script src="js/overlay.js"></script>
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+	  document.querySelectorAll(".anchor_nav a").forEach(function (link) {
+		link.addEventListener("click", function (e) {
+		  const linkText = link.textContent.trim();
+		  const href = link.getAttribute("href");
+  
+		  rybbit.track("Navigation Click", {
+			label: linkText,
+			destination: href
+		  });
+		});
+	  });
+	});
+  </script>
 <!-- /SCRIPTS -->
 
 </body>
