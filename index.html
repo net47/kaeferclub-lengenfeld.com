@@ -1,480 +1,433 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-
+<html lang="de">
 <head>
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<meta name="description" content="Herzlich Willkommen auf der Webseite des VW Käferclub Lengenfeld!">
-<meta name="author" content="VW Käferclub Lengenfeld">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VW Käferclub Lengenfeld</title>
+<meta name="description" content="VW Käferclub Lengenfeld – seit 1993. Käfertreffen, Ausfahrten und luftgekühlte Leidenschaft in Lengenfeld (NÖ).">
+<meta name="author" content="VW Käferclub Lengenfeld">
+<meta name="theme-color" content="#1c2a3a">
+<link rel="canonical" href="https://kaeferclub-lengenfeld.com/">
 
-<!-- STYLES -->
-<link rel="stylesheet" type="text/css" href="css/plugins.css" />
-<link rel="stylesheet" type="text/css" href="css/modalboxes.css" />
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-<link rel="stylesheet" type="text/css" href="css/font.css" />
-<link rel="stylesheet" type="text/css" href="css/overlay.css" />
-<!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
-<link rel="apple-touch-icon-precomposed" href="apple-touch-fa-57x57-precomposed.png">
-<link rel="shortcut icon" href="favicon.ico">
-<!-- /STYLES -->
+<!-- Vorschau beim Teilen (WhatsApp, Facebook, …) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VW Käferclub Lengenfeld">
+<meta property="og:title" content="VW Käferclub Lengenfeld">
+<meta property="og:description" content="Käfertreffen, Ausfahrten und luftgekühlte Leidenschaft – seit 1993.">
+<meta property="og:image" content="https://kaeferclub-lengenfeld.com/img/welcome/welcome.jpg">
+<meta property="og:locale" content="de_AT">
+
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon" href="apple-touch-icon-57x57-precomposed.png">
+<link rel="preload" href="css/font/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2" as="font" type="font/woff2" crossorigin>
 
 <!-- Metrics -->
-<script
-    src="https://wa.tremmel.dev/api/script.js"
-    data-site-id="2"
-	data-session-replay="true"
-    defer
-></script>
-<!-- End Metrics Code -->
+<script src="https://wa.tremmel.dev/api/script.js" data-site-id="2" data-session-replay="true" defer></script>
 
-<!-- SAISON-UMSCHALTUNG: 20.12. bis 02.01. Weihnachtsbanner statt Welcome -->
-<style>
-    .season-xmas { display: none; }
-    html.is-xmas .season-xmas { display: block; }
-    html.is-xmas .season-default { display: none; }
-</style>
-<script>
-    (function () {
-        var now = new Date();
-        var m = now.getMonth() + 1, d = now.getDate();
-        var isXmas = (m === 12 && d >= 20) || (m === 1 && d <= 2);
-        if (isXmas) document.documentElement.className += ' is-xmas';
+<script>document.documentElement.classList.add('js');</script>
 
-        document.addEventListener('DOMContentLoaded', function () {
-            // Neujahrs-Jahreszahl setzen (im Dezember: nächstes Jahr)
-            var year = now.getFullYear() + (m === 12 ? 1 : 0);
-            var els = document.querySelectorAll('.xmas-year');
-            for (var i = 0; i < els.length; i++) els[i].textContent = year;
-            // Inaktiven Block entfernen (vermeidet doppelte id="home")
-            var hide = document.querySelectorAll(isXmas ? '.season-default' : '.season-xmas');
-            for (var j = 0; j < hide.length; j++) hide[j].parentNode.removeChild(hide[j]);
-        });
-    })();
-</script>
-<!-- /SAISON-UMSCHALTUNG -->
-
+<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="tm_sidebar"> 
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
 
-	<!-- PRELOADER -->
-	<div id="preloader">
-		<div class="loader_line"></div>
-	</div>
-	<!-- /PRELOADER -->
+<!-- Icon-Sprite: wird unten per <use href="#i-…"> verwendet -->
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></symbol>
+  <symbol id="i-photo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.23 2.68.23v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></symbol>
+</svg>
 
-	<!-- Weihnachten 
-	<div id="myoverlay" class="overlay">
-		<div class="overlay-content">
-		<span class="close">&times;</span>
-		<p style="text-align: center;"><img src="img/welcome/weihnachten.jpg"></p>
-		<p>&nbsp;</p>
-		<h5 style="text-align: center;">Der VW Käferclub Lengenfeld wünscht all seinen<br>
-			Sponsoren, Mitgliedern, Freunden und Unterstützern<br>
-			ein frohes Weihnachtsfest und alles Gute für das Jahr 2026!</h5>
-		</div>
-	</div>-->
+<!-- ===================== HEADER ===================== -->
+<header class="header" id="header">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="VW Käferclub Lengenfeld – zum Seitenanfang">
+      <img src="img/logo/logo.jpg" alt="VW Käferclub Lengenfeld" width="525" height="184">
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menü öffnen">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Hauptmenü">
+      <ul>
+        <li><a href="#aktuelles">Aktuelles</a></li>
+        <li><a href="#ueber-uns">Über uns</a></li>
+        <li><a href="https://fotos.kaeferclub-lengenfeld.com" target="_blank" rel="noopener">Fotogalerie <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+        <li><a href="#freunde-sponsoren">Freunde &amp; Sponsoren</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-	<!-- WRAPPER ALL -->
-	<div class="erling_tm_all_wrap"> 
-	
-		<!-- MOBILE MENU -->
-		<div class="erling_tm_mobile_menu">
-			<div class="mobile_menu_inner">
-				<div class="mobile_in">
-					<div class="logo">
-						<a href="#"><img src="img/logo/logo.jpg" alt="" /></a>
-					</div>
-					<div class="trigger">
-						<div class="hamburger hamburger--slider">
-							<div class="hamburger-box">
-								<div class="hamburger-inner"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="dropdown">
-				<div class="dropdown_inner">
-					<ul class="anchor_nav">
-						<li class="current"><a href="#home">Home</a></li>
-						<li><a href="#aktuelles">Aktuelles</a></li>
-						<li><a href="#ueber-uns">Über uns</a></li>
-						<li><a href="https://fotos.kaeferclub-lengenfeld.com" target="_blank">Fotogalerie</a></li>
-						<li><a href="#freunde-sponsoren">Freunde & Sponsoren</a></li>
-						<li><a href="#kontakt">Kontakt</a></li>
-						<li><a href="#impressum">Impressum</a></li>
-					</ul>
-				</div>
-				<div class="copyright">
-					<p>folge uns auf&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/vwkaferclub.lengenfeld" target="_blank"><img src="img/sidebar/facebook.png" height="23px"></a></p>
-				</div>
-			</div>
-		</div>
-		<!-- /MOBILE MENU -->
-		
-		<!-- SIDEBAR MENU -->
-		<div class="erling_tm_sidebar_menu">
-			<div class="sidebar_inner">
-				<div class="logo">
-					<a href="#"><img src="img/logo/logo.jpg" alt="" /></a>
-				</div>
-				<div class="menu">
-					<ul class="anchor_nav">
-						<li class="current"><a href="#home">Home</a></li>
-						<li><a href="#aktuelles">Aktuelles</a></li>
-						<li><a href="#ueber-uns">Über uns</a></li>
-						<li><a href="https://fotos.kaeferclub-lengenfeld.com" target="_blank">Fotogalerie</a></li>
-						<li><a href="#freunde-sponsoren">Freunde & Sponsoren</a></li>
-						<li><a href="#kontakt">Kontakt</a></li>
-						<li><a href="#impressum">Impressum</a></li>
-					</ul>
-				</div>
-				<div class="copyright">
-					<p>folge uns auf&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/vwkaferclub.lengenfeld" target="_blank"><img src="img/sidebar/facebook.png" height="23px"></a></p>
-				</div>
-			</div>
-		</div>
-		<!-- /SIDEBAR MENU -->
+<main id="inhalt">
 
-		<!-- MAINPART -->
-		<div class="erling_tm_mainpart">
-			
-			<!-- WEIHNACHTEN (automatisch 20.12.-02.01. sichtbar) -->
-			<div class="erling_tm_section clearfix season-xmas" id="home">
-				<div class="erling_tm_hero">
-					<div class="container">
-						<div class="content">
-							<div class="details square">
-								<div class="image">
-									<div class="main" data-img-url="img/welcome/weihnachten.jpg"></div>
-								</div>
-								<div class="text" style="width: 100%;">
-									<h1>Frohe Weihnachten!</h1>
-									<div class="job">
-										<span>
-											<p>Der VW Käferclub Lengenfeld wünscht all seinen<br>
-												Sponsoren, Mitgliedern, Freunden und Unterstützern<br>
-												ein frohes Weihnachtsfest und alles Gute für das Jahr <span class="xmas-year">2027</span>!</p>
-										</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- /WEIHNACHTEN -->
+  <!-- ===================== HERO =====================
+       Zeitfenster per data-when (siehe Script ganz unten):
+         "MM-TT..MM-TT"           → jedes Jahr wiederkehrend (auch über Jahreswechsel)
+         "JJJJ-MM-TT..JJJJ-MM-TT" → einmalig
+         "!…"                     → außerhalb des Zeitfensters
+       data-nojs = wird auch ohne JavaScript angezeigt                       -->
+  <section class="hero" id="home" aria-label="Willkommen">
 
-			<!-- WELCOME (ausserhalb 20.12.-02.01. sichtbar) -->
-			<div class="erling_tm_section clearfix season-default" id="home">
-				<div class="erling_tm_hero">
-					<div class="container">
-						<div class="content">
-							<div class="details square">
-								<div class="image">
-									<div class="main" data-img-url="img/welcome/welcome.jpg"></div>
-								</div>
-								<div class="text" style="width: 100%;">
-									<h1>Herzlich Willkommen</h1>
-									<h4>auf der Webseite des VW Käferclub Lengenfeld!</h4>
-									<div class="job">
-										<span>
-											<p>Es freut uns, dass ihr auf unserer Webseite gelandet seid und hoffen, euch dadurch einen kleinen Einblick über unsere Aktivitäten und Veranstaltungen geben zu können.</p>
-											<p>&nbsp;</p>
-											<!--<p>Selbstverständlich würden wir uns freuen, wenn uns der eine oder andere Besucher auf unserem <span class="special-announcement">Käfertreffen vom 10.-12. Juli 2026</span> besuchen kommt!</p>
-											<p>&nbsp;</p>-->
-											<p>In diesem Sinne: luftgekühlte Grüße und viel Spaß auf unserer Webseite!</p>
-										</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- /WELCOME -->
+    <!-- Weihnachten: jedes Jahr 20.12.–02.01. -->
+    <div class="hero__slide" data-when="12-20..01-02">
+      <div class="hero__bg"><img src="img/welcome/weihnachten.jpg" alt="" width="1600" height="747" fetchpriority="high"></div>
+      <div class="wrap">
+        <div class="hero__content">
+          <span class="eyebrow">Frohe Weihnachten</span>
+          <h1>Frohe Weihnachten!</h1>
+          <p>Der VW Käferclub Lengenfeld wünscht all seinen Sponsoren, Mitgliedern, Freunden und Unterstützern ein frohes Weihnachtsfest und alles Gute für das Jahr <span class="js-newyear">2027</span>!</p>
+        </div>
+      </div>
+    </div>
 
-			<!-- AKTUELLES -->
-			<div class="erling_tm_section clearfix" id="aktuelles">
-				<div class="erling_tm_news">
-					<div class="container">
-						<div class="erling_tm_title wow fadeInUp" data-wow-duration="1s">
-							<h3>Aktuelles</h3>
-						</div>
-						<div class="news_list">
-							<ul>
+    <!-- Standard: restliches Jahr -->
+    <div class="hero__slide" data-when="!12-20..01-02" data-nojs>
+      <div class="hero__bg"><img src="img/welcome/welcome.jpg" alt="Weißer VW Käfer bei einer Ausfahrt durch die Weinberge" width="1024" height="680" fetchpriority="high"></div>
+      <div class="wrap">
+        <div class="hero__content">
+          <span class="eyebrow">Seit 1993 · Lengenfeld, NÖ</span>
+          <h1>Herzlich Willkommen beim VW Käferclub Lengenfeld!</h1>
+          <p>Schön, dass ihr hier gelandet seid. Hier bekommt ihr einen kleinen Einblick in unsere Aktivitäten und Veranstaltungen. Luftgekühlte Grüße!</p>
 
-								<li class="wow fadeInUp" data-wow-duration="1s">
-									<div class="list_inner">
-										<div class="details">
-											<div class="meta">
-												<span class="news-header">
-													Flyer VW Käfertreffen 2026
-													<br />
-													<span class="sub-news-header"><i class="icon-calendar-empty"></i> 13.05.2026</span>
-												</span>
-											</div>
-											<div class="title">
-												<p>Den Flyer zum heurigen VW Käfertreffen in Lengenfeld findet ihr hier:</p>
-												<p>&nbsp;</p>
-												<a href="files/flyer_2026.jpg" target="_blank"><img src="files/flyer_2026.jpg" height="300px"></a>
-												<p>&nbsp;</p>
-												<p><a class="text_hover_effect" href="files/flyer_2026.jpg" target="_blank"><i class="icon-link-ext"></i> Flyer Käfertreffen 2026</a></p>
-											</div>
-										</div>
-									</div>
-								</li>
+          <!-- Käfertreffen-Hinweis: Daten für nächstes Jahr einfach anpassen -->
+          <div class="announce" data-when="2026-05-01..2026-07-12">
+            <svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>
+            <span><strong>VW Käfertreffen 10.–12. Juli 2026</strong> – wir freuen uns auf euren Besuch!</span>
+          </div>
 
-								<li class="wow fadeInUp" data-wow-duration="1s">
-									<div class="list_inner">
-										<div class="details">
-											<div class="meta">
-												<span class="news-header">
-													Einladung Glühweinstand 2025
-													<br />
-													<span class="sub-news-header"><i class="icon-calendar-empty"></i> 25.11.2025</span>
-												</span>
-											</div>
-											<div class="title">
-												<p>Am 13. Dezember findet der diesjährige Glühweinstand des Käferclubs Lengenfeld statt!</p>
-												<p>&nbsp;</p>
-												<p><strong>Uhrzeit:</strong> ab 17:00 Uhr<br />
-												<strong>Ort:</strong> alter Sportplatz in Lengenfeld</p>
-												<p>&nbsp;</p>
-												<a href="files/Gluehweinstand_2025.jpg" target="_blank"><img src="files/Gluehweinstand_2025.jpg" height="300px"></a>
-												<p>&nbsp;</p>
-												<p><a class="text_hover_effect" href="files/Gluehweinstand_2025.jpg" target="_blank"><i class="icon-link-ext"></i> Flyer Glühweinstand 2025</a></p>
-											</div>
-										</div>
-									</div>
-								</li>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#aktuelles">Aktuelles</a>
+            <a class="btn btn--ghost" href="https://fotos.kaeferclub-lengenfeld.com" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-photo"/></svg> Fotogalerie
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Fakten -->
+  <div class="wrap">
+    <div class="facts">
+      <div class="fact reveal"><b>1993</b><span>gegründet am 4. Mai</span></div>
+      <div class="fact reveal"><b>20.07.1993</b><span>erstes Käfertreffen mit Kellergassenfest</span></div>
+      <div class="fact reveal"><b>220</b><span>Fahrzeuge bei unseren Treffen</span></div>
+    </div>
+  </div>
 
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- /AKTUELLES -->
+  <!-- ===================== AKTUELLES ===================== -->
+  <section class="section" id="aktuelles">
+    <div class="wrap">
+      <span class="eyebrow">Neuigkeiten</span>
+      <h2>Aktuelles</h2>
 
-			<!-- UEBER-UNS -->
-			<div class="erling_tm_section clearfix" id="ueber-uns">
-				<div class="erling_tm_about">
-					<div class="container">
-						<div class="about_inner">
-							<div class="left wow fadeInUp" data-wow-duration="1s">
-								<div class="erling_tm_title">
-									<h3>Über uns</h3>
-								</div>
-								<div class="text">
-									<p>Der Käferclub Lengenfeld wurde am 4. Mai. 1993 gegründet. Unser Ziel war es, ein Käfertreffen der anderen Art zu organisieren. Nach Absprache mit den Kellerbesitzern hatten wir Grünes Licht, und so stand dem 1. Käfertreffen mit Kellergassenfest nichts im Wege.</p>
-									<p>&nbsp;</p>
-									<p>
-										<div align="center"><img src="img/about/kaefer1.jpg" alt=""/>&nbsp;&nbsp;<img src="img/about/kaefer3.jpg" alt=""/>&nbsp;&nbsp;<img src="img/about/kaefer2.jpg" alt=""/>
-										</div>
-									</p>
-									<p>&nbsp;</p>
-									<p>Am 20. Juli 1993 war es dann soweit, rund 60 Fahrzeuge kamen zum 1. Käfertreffen des Käferclubs Lengenfeld. Die Kellerbesitzer hatten ein reichhaltiges kulinarisches Angebot und erlesene Lengenfelder Weine zur Auswahl. Der Erfolg war auf unserer Seite, und weitere Käfertreffen wurden organisiert, wo immerhin schon 220 Fahrzeuge kamen.</p>
-									<p>&nbsp;</p>
-									<p>Weitere Aktivitäten des Clubs:</p>
-									<ul>
-									  <li>Organisation des jährlichen Käfertreffens</li>
-									  <li>Besuch von anderen Käfertreffen</li>
-									  <li>Clubinterne Ausfahrten</li>
-									  <li>Brauchtumspflege in der Gemeinde</li>
-									  <li>Pflege und Wartung der Käfer von Mitgliedern</li>
-									</ul>
-									<p>&nbsp;</p>
+      <div class="news">
+        <!-- NEUER BEITRAG: diesen <article>-Block kopieren und oben einfügen -->
+        <article class="card reveal">
+          <button class="card__media" type="button" data-lightbox="files/flyer_2026.jpg" aria-label="Flyer VW Käfertreffen 2026 vergrößern">
+            <img src="files/flyer_2026.jpg" alt="Flyer VW Käfertreffen 2026" width="1079" height="1523" loading="lazy">
+          </button>
+          <div class="card__body">
+            <time datetime="2026-05-13"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg> 13.05.2026</time>
+            <h3>Flyer VW Käfertreffen 2026</h3>
+            <p>Den Flyer zum heurigen VW Käfertreffen in Lengenfeld findet ihr hier.</p>
+            <a class="card__link" href="files/flyer_2026.jpg" target="_blank">Flyer öffnen <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
+          </div>
+        </article>
 
-									<p><strong>Unser Vorstand setzt sich aus folgenden Personen zusammen:</strong></p>
-									<ul class="vorstand">
-										<li><i class="icon-user"></i> <strong>Obmann: </strong>Florian Auer</li>
-										<li><i class="icon-user"></i> <strong>Obmann-Stv.: </strong>Markus Berner</li>
-										<li><i class="icon-user"></i> <strong>Kassier: </strong>Udo Ettenauer</li>
-										<li><i class="icon-user"></i> <strong>Kassier-Stv.: </strong>Sebastian Eilenberger</li>
-										<li><i class="icon-user"></i> <strong>Schriftführer: </strong>Michael Strohmaier</li>
-										<li><i class="icon-user"></i> <strong>Schriftführer-Stv: </strong>Philipp Wohlgemuth</li>
-									</ul>
-									<p>&nbsp;</p>
-									<p><strong>Weitere Vorstandsmitglieder:</strong><br>
-										Erich Strasil<br> 
-										Clemens Seiler<br> 
-										Sebastian Strohmaier</p>
+        <article class="card reveal">
+          <button class="card__media" type="button" data-lightbox="files/Gluehweinstand_2025.jpg" aria-label="Flyer Glühweinstand 2025 vergrößern">
+            <img src="files/Gluehweinstand_2025.jpg" alt="Flyer Glühweinstand 2025" width="1080" height="1527" loading="lazy">
+          </button>
+          <div class="card__body">
+            <time datetime="2025-11-25"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg> 25.11.2025</time>
+            <h3>Einladung Glühweinstand 2025</h3>
+            <p>Am 13. Dezember findet der diesjährige Glühweinstand des Käferclubs Lengenfeld statt!</p>
+            <dl>
+              <dt>Uhrzeit</dt><dd>ab 17:00 Uhr</dd>
+              <dt>Ort</dt><dd>alter Sportplatz in Lengenfeld</dd>
+            </dl>
+            <a class="card__link" href="files/Gluehweinstand_2025.jpg" target="_blank">Flyer öffnen <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-								</div>
-							</div>
+  <!-- ===================== ÜBER UNS ===================== -->
+  <section class="section section--alt" id="ueber-uns">
+    <div class="wrap about">
+      <div class="reveal">
+        <span class="eyebrow">Seit über 30 Jahren</span>
+        <h2>Über uns</h2>
+        <p class="lead">Der Käferclub Lengenfeld wurde am 4. Mai 1993 gegründet. Unser Ziel war es, ein Käfertreffen der anderen Art zu organisieren.</p>
+        <p>Nach Absprache mit den Kellerbesitzern hatten wir grünes Licht, und so stand dem 1. Käfertreffen mit Kellergassenfest nichts im Wege. Am 20. Juli 1993 war es dann so weit: Rund 60 Fahrzeuge kamen zum 1. Käfertreffen des Käferclubs Lengenfeld. Die Kellerbesitzer hatten ein reichhaltiges kulinarisches Angebot und erlesene Lengenfelder Weine zur Auswahl. Der Erfolg war auf unserer Seite, und weitere Käfertreffen wurden organisiert, zu denen immerhin schon 220 Fahrzeuge kamen.</p>
 
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- /UEBER-UNS -->
+        <h3>Was wir machen</h3>
+        <ul class="checklist">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Organisation des jährlichen Käfertreffens</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Besuch von anderen Käfertreffen</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Clubinterne Ausfahrten</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Brauchtumspflege in der Gemeinde</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Pflege und Wartung der Käfer von Mitgliedern</li>
+        </ul>
+      </div>
 
-			<!-- ANFAHRTSPLAN 
-			<div class="erling_tm_section clearfix" id="anfahrtsplan">
-				<div class="erling_tm_anfahrtsplan">
-					<div class="container">
-						<div class="erling_tm_title wow fadeInUp" data-wow-duration="1s">
-							<h3>Anfahrtsplan</h3>
-						</div>
+      <div class="reveal">
+        <div class="polaroids">
+          <figure><img src="img/about/kaefer1.jpg" alt="VW Käfer" width="200" height="110" loading="lazy"></figure>
+          <figure><img src="img/about/kaefer3.jpg" alt="VW Käfer" width="115" height="170" loading="lazy"></figure>
+          <figure><img src="img/about/kaefer2.jpg" alt="VW Käfer" width="300" height="127" loading="lazy"></figure>
+        </div>
 
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.2171986153394!2d15.600342615826996!3d48.471547335819785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47729ad0c3d8968f%3A0x4639b89a7a020840!2sK%C3%A4ferclub+Lengenfeld!5e0!3m2!1sde!2sat!4v1459967661554" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <h3 class="mt-2">Unser Vorstand</h3>
+        <div class="board">
+          <div class="person"><small>Obmann</small><span>Florian Auer</span></div>
+          <div class="person"><small>Obmann-Stv.</small><span>Markus Berner</span></div>
+          <div class="person"><small>Kassier</small><span>Udo Ettenauer</span></div>
+          <div class="person"><small>Kassier-Stv.</small><span>Sebastian Eilenberger</span></div>
+          <div class="person"><small>Schriftführer</small><span>Michael Strohmaier</span></div>
+          <div class="person"><small>Schriftführer-Stv.</small><span>Philipp Wohlgemuth</span></div>
+        </div>
+        <p class="muted mt-1"><strong>Weitere Vorstandsmitglieder:</strong> Erich Strasil, Clemens Seiler, Sebastian Strohmaier</p>
+      </div>
+    </div>
+  </section>
 
-					</div>
-				</div>
-			</div>-->
-			<!-- /ANFAHRTSPLAN -->	
+  <!-- ===================== FREUNDE & SPONSOREN ===================== -->
+  <section class="section" id="freunde-sponsoren">
+    <div class="wrap">
+      <span class="eyebrow">Gemeinsam unterwegs</span>
+      <h2>Freunde &amp; Sponsoren</h2>
 
-			<!-- FREUNDE & SPONSOREN -->
-			<div class="erling_tm_section clearfix" id="freunde-sponsoren">
-				<div class="erling_tm_freunde-sponsoren">
-					<div class="container">
-						<div class="erling_tm_title wow fadeInUp" data-wow-duration="1s">
-							<h3>Freunde & Sponsoren</h3>
-						</div>
-						<div class="contact_inner">
+      <div class="links">
+        <section class="reveal">
+          <h3>Käferfreunde</h3>
+          <ul>
+            <li><a href="http://www.beetleconnection.de/" target="_blank" rel="noopener">Beetleconnection <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+            <li><a href="http://www.buggyfahrer.info/" target="_blank" rel="noopener">Buggyfreunde Sinabelkirchen <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+            <li><a href="http://www.ge-ma-classics-shop.de/" target="_blank" rel="noopener">Käfer Teile Onlineshop <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+            <li><a href="http://www.vw-kaeferclub.com/" target="_blank" rel="noopener">Käferfreunde Obergrafendorf <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+            <li><a href="http://www.kaefertreter.com/" target="_blank" rel="noopener">Käfertreter Obergricht Tirol <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+            <li><a href="http://www.khrt.org/" target="_blank" rel="noopener">Koksi’s Käferclub St. Valentin <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+          </ul>
+        </section>
+        <section class="reveal">
+          <h3>Vereine</h3>
+          <ul>
+            <li><a href="http://www.feuerwehr-lengenfeld.at/" target="_blank" rel="noopener">Freiw. Feuerwehr Lengenfeld <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+            <li><a href="http://www.sclengenfeld.at/" target="_blank" rel="noopener">Sportclub Lengenfeld <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+            <li><a href="http://www.tclengenfeld.at/" target="_blank" rel="noopener">Tennisclub Lengenfeld <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+          </ul>
+          <h3 class="mt-15">Sonstiges</h3>
+          <ul>
+            <li><a href="http://www.private-kv-heute.de/" target="_blank" rel="noopener">Private Krankenversicherung Heute <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+          </ul>
+        </section>
+        <section class="reveal">
+          <h3>Sponsoren</h3>
+          <a class="sponsor" href="https://www.vav.at/privat.html" target="_blank" rel="noopener">
+            <img src="img/sponsoren/VAV_Logo.jpg" alt="VAV Versicherung" width="279" height="112" loading="lazy">
+          </a>
+        </section>
+      </div>
+    </div>
+  </section>
 
-							<p><strong>Käferfreunde</strong></p>
-							<p>&nbsp;</p>
-							<ul>
-								<li><a class="text_hover_effect" href="http://www.beetleconnection.de/" target="_blank">Beetleconnection</a></li>
-								<li><a class="text_hover_effect" href="http://www.buggyfahrer.info/" target="_blank">Buggyfreunde Sinabelkirchen</a></li>
-								<li><a class="text_hover_effect" href="http://www.ge-ma-classics-shop.de/" target="_blank">Käfer Teile Onlineshop</a></li>
-								<li><a class="text_hover_effect" href="http://www.vw-kaeferclub.com/" target="_blank">Käferfreunde Obergrafendorf</a></li>
-								<li><a class="text_hover_effect" href="http://www.kaefertreter.com/" target="_blank">Käfertreter Obergricht Tirol</a></li>
-								<li><a class="text_hover_effect" href="http://www.khrt.org/" target="_blank">Koksi`s Käferclub St. Valentin</a></li>
-							</ul>
-							<p>&nbsp;</p>
-							<p><strong>Vereine</strong></p>
-							<p>&nbsp;</p>
-							<ul>
-								<li><a class="text_hover_effect" href="http://www.feuerwehr-lengenfeld.at/" target="_blank">Freiw. Feuerwehr Lengenfeld</a></li>
-								<li><a class="text_hover_effect" href="http://www.sclengenfeld.at/" target="_blank">Sportclub Lengenfeld</a></li>
-								<li><a class="text_hover_effect" href="http://www.tclengenfeld.at/" target="_blank">Tennisclub Lengenfeld</a></li>
-							</ul>
-							<p>&nbsp;</p>
-							<p><strong>Sonstiges</strong></p>
-							<p>&nbsp;</p>
-							<ul>
-								<li><a class="text_hover_effect" href="http://www.private-kv-heute.de/" target="_blank">Private Krankenversicherung Heute</a></li>
-							</ul>
-							<p>&nbsp;</p>
-							<p><strong>Sponsoren</strong></p>
-							<p>&nbsp;</p>
-							<a href="https://www.vav.at/privat.html" target="_blank"><img src="img/sponsoren/VAV_Logo.jpg"></a>
+  <!-- ===================== KONTAKT ===================== -->
+  <section class="section section--alt" id="kontakt">
+    <div class="wrap">
+      <span class="eyebrow">Schreibt uns</span>
+      <h2>Kontakt</h2>
 
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- /FREUNDE & SPONSOREN -->
+      <div class="contact">
+        <div class="contact__info reveal">
+          <div class="contact__row">
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+            <div><strong>VW Käferclub Lengenfeld</strong><br>Kremser Straße 21a<br>3552 Lengenfeld</div>
+          </div>
+          <div class="contact__row">
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+            <a href="mailto:kaeferclub@gmx.net">kaeferclub@gmx.net</a>
+          </div>
+          <div class="contact__row">
+            <svg class="icon" aria-hidden="true"><use href="#i-fb"/></svg>
+            <a href="https://www.facebook.com/vwkaferclub.lengenfeld" target="_blank" rel="noopener">Folgt uns auf Facebook</a>
+          </div>
+          <a class="btn btn--primary" href="mailto:kaeferclub@gmx.net">
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Sende uns eine E-Mail!
+          </a>
+        </div>
 
-			<!-- KONTAKT -->
-			<div class="erling_tm_section clearfix" id="kontakt">
-				<div class="erling_tm_contact">
-					<div class="container">
-						<div class="erling_tm_title wow fadeInUp" data-wow-duration="1s">
-							<h3>Kontakt</h3>
-						</div>
-						<div class="contact_inner">
+        <!-- Google Maps wird erst nach Klick geladen (Datenschutz) -->
+        <div class="map reveal" id="map">
+          <div class="map__consent">
+            <strong>Karte anzeigen?</strong>
+            <p>Beim Laden der Karte werden Daten an Google übertragen. Alternativ:
+              <a href="https://maps.google.com/?q=K%C3%A4ferclub+Lengenfeld" target="_blank" rel="noopener">in Google Maps öffnen</a>.</p>
+            <button class="btn btn--primary" type="button" id="map-load">
+              <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Karte laden
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-							<iframe
-								width="100%"
-								height="400"
-								style="border:0"
-								loading="lazy"
-								allowfullscreen
-								referrerpolicy="no-referrer-when-downgrade"
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.2171986153394!2d15.600342615826996!3d48.471547335819785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47729ad0c3d8968f%3A0x4639b89a7a020840!2sK%C3%A4ferclub+Lengenfeld!5e0!3m2!1sde!2sat!4v1459967661554">
-							</iframe>
+  <!-- ===================== IMPRESSUM ===================== -->
+  <section class="section" id="impressum">
+    <div class="wrap">
+      <h2>Impressum</h2>
+      <div class="legal">
+        <p><strong>VW Käferclub Lengenfeld</strong><br>Kremser Straße 21a<br>3552 Lengenfeld<br>ZVR-Nr. 154601817</p>
+        <p><strong>Obmann und Herausgeber:</strong><br>Florian Auer</p>
+        <p><strong>Technische Umsetzung und Gestaltung:</strong><br>Daniel Tremmel · <a href="https://tremmel.xyz" target="_blank" rel="noopener">Website</a></p>
+      </div>
 
-							<p>&nbsp;</p>
+      <details>
+        <summary>Haftung für Inhalte</summary>
+        <p>Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt erstellt. Der Anbieter übernimmt jedoch keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Inhalte. Die Nutzung der Inhalte der Website erfolgt auf eigene Gefahr des Nutzers. Namentlich gekennzeichnete Beiträge geben die Meinung des jeweiligen Autors und nicht immer die Meinung des Anbieters wieder. Mit der reinen Nutzung der Website des Anbieters kommt keinerlei Vertragsverhältnis zwischen dem Nutzer und dem Anbieter zustande.</p>
+      </details>
+      <details>
+        <summary>Haftung für Links</summary>
+        <p>Diese Website enthält Verknüpfungen zu Websites Dritter ("externe Links"). Diese Websites unterliegen der Haftung der jeweiligen Betreiber. Der Anbieter hat bei der erstmaligen Verknüpfung der externen Links die fremden Inhalte daraufhin überprüft, ob etwaige Rechtsverstöße bestehen. Zu dem Zeitpunkt waren keine Rechtsverstöße ersichtlich. Der Anbieter hat keinerlei Einfluss auf die aktuelle und zukünftige Gestaltung und auf die Inhalte der verknüpften Seiten. Das Setzen von externen Links bedeutet nicht, dass sich der Anbieter die hinter dem Verweis oder Link liegenden Inhalte zu Eigen macht. Eine ständige Kontrolle der externen Links ist für den Anbieter ohne konkrete Hinweise auf Rechtsverstöße nicht zumutbar. Bei Kenntnis von Rechtsverstößen werden jedoch derartige externe Links unverzüglich gelöscht.</p>
+      </details>
+      <details>
+        <summary>Urheberrecht</summary>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem österreichischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+      </details>
+      <details>
+        <summary>Datenschutz</summary>
+        <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.</p>
+      </details>
+    </div>
+  </section>
+</main>
 
-							<script>
-								function sendEmail() 
-								{
-									window.location = "mailto:kaeferclub@gmx.net";
-								}
-							</script>
-							<p><div class="erling_tm_button" onclick="sendEmail();">
-								<button type="submit" id="send_message" href="#">Sende uns eine E-Mail!</button>
-							</div></p>
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span class="js-year">2026</span> VW Käferclub Lengenfeld</span>
+    <nav aria-label="Fußzeile">
+      <a href="https://www.facebook.com/vwkaferclub.lengenfeld" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-fb"/></svg> Facebook</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#impressum">Impressum</a>
+    </nav>
+  </div>
+</footer>
 
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- /KONTAKT -->	
+<a class="totop" href="#home" aria-label="Nach oben"><svg class="icon" aria-hidden="true"><use href="#i-up"/></svg></a>
 
-			<!-- IMPRESSUM -->
-			<div class="erling_tm_section clearfix" id="impressum">
-				<div class="erling_tm_impressum">
-					<div class="container">
-						<div class="erling_tm_title wow fadeInUp" data-wow-duration="1s">
-							<h3>Impressum</h3>
-						</div>
-						<div class="contact_inner">
+<dialog class="lightbox" id="lightbox" aria-label="Bildansicht">
+  <form method="dialog"><button aria-label="Schließen">&times;</button></form>
+  <img src="" alt="">
+</dialog>
 
-							<p><strong>VW Käferclub Lengenfeld</strong><br>
-							Kremser Straße 21a<br>
-							3552 Lengenfeld<br>
-							ZVR-Nr. 154601817</p>
-							<p>&nbsp;</p>
-							<p><strong>Obmann und Herausgeber:</strong><br>
-							Markus Berner</p>
-						  	<p><strong>technische Umsetzung und Gestaltung:</strong><br>
-							Daniel Tremmel <a class="text_hover_effect" href="https://tremmel.xyz" target="_blank"><i class="icon-link-ext"></i> Website</a></p>
-							<p>&nbsp;</p>
-						  	<p><strong>Haftung für Inhalte</strong></p>
-						  	<p>Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt erstellt. Der Anbieter übernimmt jedoch keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Inhalte. Die Nutzung der Inhalte der Website erfolgt auf eigene Gefahr des Nutzers. Namentlich gekennzeichnete Beiträge geben die Meinung des jeweiligen Autors und nicht immer die Meinung des Anbieters wieder. Mit der reinen Nutzung der Website des Anbieters kommt keinerlei Vertragsverhältnis zwischen dem Nutzer und dem Anbieter zustande.</p>
-							<p>&nbsp;</p>
-						  	<p><strong>Haftung für Links</strong></p>
-						  	<p>Diese Website enthält Verknüpfungen zu Websites Dritter ("externe Links"). Diese Websites unterliegen der Haftung der jeweiligen Betreiber. Der Anbieter hat bei der erstmaligen Verknüpfung der externen Links die fremden Inhalte daraufhin überprüft, ob etwaige Rechtsverstöße bestehen. Zu dem Zeitpunkt waren keine Rechtsverstöße ersichtlich. Der Anbieter hat keinerlei Einfluss auf die aktuelle und zukünftige Gestaltung und auf die Inhalte der verknüpften Seiten. Das Setzen von externen Links bedeutet nicht, dass sich der Anbieter die hinter dem Verweis oder Link liegenden Inhalte zu Eigen macht. Eine ständige Kontrolle der externen Links ist für den Anbieter ohne konkrete Hinweise auf Rechtsverstöße nicht zumutbar. Bei Kenntnis von Rechtsverstößen werden jedoch derartige externe Links unverzüglich gelöscht.</p>
-							<p>&nbsp;</p>
-						  	<p><strong>Urheberrecht</strong></p>
-						 	<p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem österreichischem Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
-							<p>&nbsp;</p>
-						  	<p><strong>Datenschutz</strong></p>
-						  	<p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.</p>
+<script>
+(function () {
+  var now = new Date();
+  var today = now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate(); // JJJJMMTT
+  var mmdd = today % 10000;                                                             // MMTT
 
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- /IMPRESSUM -->
-	
-		</div>
-		<!-- /MAINPART -->
-		
-		<!-- TOTOP -->
-		<div class="progressbar">
-			<a href="#"><span class="text">nach oben</span></a>
-			<span class="line"></span>
-		</div>
-		<!-- /TOTOP -->
-		
-	</div>
-	<!-- / WRAPPER ALL -->
-	
-<!-- SCRIPTS -->
-<script src="js/jquery.js"></script>
-<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
-<script src="js/plugins.js"></script>
-<script src="js/contact.form.js"></script>
-<script src="js/init.js"></script>
-<script src="js/overlay.js"></script>
-<!-- /SCRIPTS -->
+  // ---- Zeitfenster (data-when) ----
+  function num(s) { return parseInt(s.replace(/-/g, ''), 10); }
+  function inWindow(expr) {
+    var neg = expr.charAt(0) === '!';
+    var p = expr.replace('!', '').split('..');
+    var a = num(p[0]), b = num(p[1]), hit;
+    if (p[0].length > 5) {                 // einmalig: JJJJ-MM-TT..JJJJ-MM-TT
+      hit = today >= a && today <= b;
+    } else {                               // jährlich: MM-TT..MM-TT (auch über Silvester)
+      hit = a <= b ? (mmdd >= a && mmdd <= b) : (mmdd >= a || mmdd <= b);
+    }
+    return neg ? !hit : hit;
+  }
+  document.querySelectorAll('[data-when]').forEach(function (el) {
+    if (inWindow(el.getAttribute('data-when'))) el.classList.add('is-on');
+  });
 
+  // ---- Jahreszahlen ----
+  document.querySelectorAll('.js-year').forEach(function (el) { el.textContent = now.getFullYear(); });
+  document.querySelectorAll('.js-newyear').forEach(function (el) {
+    el.textContent = now.getFullYear() + (now.getMonth() === 11 ? 1 : 0);
+  });
+
+  // ---- Mobile-Menü ----
+  var toggle = document.querySelector('.nav-toggle'), nav = document.getElementById('nav');
+  function setMenu(open) {
+    nav.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+  }
+  toggle.addEventListener('click', function () { setMenu(!nav.classList.contains('is-open')); });
+  nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // ---- Header-Schatten & "nach oben" ----
+  var header = document.getElementById('header'), totop = document.querySelector('.totop');
+  function onScroll() {
+    var y = window.scrollY;
+    header.classList.toggle('is-scrolled', y > 8);
+    totop.classList.toggle('is-visible', y > 600);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // ---- Aktiven Menüpunkt markieren & Einblenden ----
+  if ('IntersectionObserver' in window) {
+    var links = {};
+    nav.querySelectorAll('a[href^="#"]').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          Object.keys(links).forEach(function (k) { links[k].classList.toggle('is-active', k === en.target.id); });
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('main > section[id]').forEach(function (s) { spy.observe(s); });
+
+    var rev = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); rev.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { rev.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
+  }
+
+  // ---- Lightbox für Flyer ----
+  var box = document.getElementById('lightbox');
+  if (box && typeof box.showModal === 'function') {
+    var boxImg = box.querySelector('img');
+    document.querySelectorAll('[data-lightbox]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var img = btn.querySelector('img');
+        boxImg.src = btn.getAttribute('data-lightbox');
+        boxImg.alt = img ? img.alt : '';
+        box.showModal();
+      });
+    });
+    box.addEventListener('click', function (e) { if (e.target === box) box.close(); });
+  } else {
+    document.querySelectorAll('[data-lightbox]').forEach(function (btn) {
+      btn.addEventListener('click', function () { window.open(btn.getAttribute('data-lightbox'), '_blank'); });
+    });
+  }
+
+  // ---- Google Maps erst nach Zustimmung ----
+  document.getElementById('map-load').addEventListener('click', function () {
+    var map = document.getElementById('map');
+    map.innerHTML = '<iframe title="Karte: Käferclub Lengenfeld" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" ' +
+      'src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.2171986153394!2d15.600342615826996!3d48.471547335819785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47729ad0c3d8968f%3A0x4639b89a7a020840!2sK%C3%A4ferclub+Lengenfeld!5e0!3m2!1sde!2sat!4v1459967661554"></iframe>';
+  });
+})();
+</script>
 </body>
 </html>
