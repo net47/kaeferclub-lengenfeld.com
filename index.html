@@ -37,6 +37,32 @@
 ></script>
 <!-- End Metrics Code -->
 
+<!-- SAISON-UMSCHALTUNG: 20.12. bis 02.01. Weihnachtsbanner statt Welcome -->
+<style>
+    .season-xmas { display: none; }
+    html.is-xmas .season-xmas { display: block; }
+    html.is-xmas .season-default { display: none; }
+</style>
+<script>
+    (function () {
+        var now = new Date();
+        var m = now.getMonth() + 1, d = now.getDate();
+        var isXmas = (m === 12 && d >= 20) || (m === 1 && d <= 2);
+        if (isXmas) document.documentElement.className += ' is-xmas';
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Neujahrs-Jahreszahl setzen (im Dezember: nächstes Jahr)
+            var year = now.getFullYear() + (m === 12 ? 1 : 0);
+            var els = document.querySelectorAll('.xmas-year');
+            for (var i = 0; i < els.length; i++) els[i].textContent = year;
+            // Inaktiven Block entfernen (vermeidet doppelte id="home")
+            var hide = document.querySelectorAll(isXmas ? '.season-default' : '.season-xmas');
+            for (var j = 0; j < hide.length; j++) hide[j].parentNode.removeChild(hide[j]);
+        });
+    })();
+</script>
+<!-- /SAISON-UMSCHALTUNG -->
+
 </head>
 
 <body class="tm_sidebar"> 
@@ -124,8 +150,8 @@
 		<!-- MAINPART -->
 		<div class="erling_tm_mainpart">
 			
-			<!-- WEIHNACHTEN
-			<div class="erling_tm_section clearfix" id="home">
+			<!-- WEIHNACHTEN (automatisch 20.12.-02.01. sichtbar) -->
+			<div class="erling_tm_section clearfix season-xmas" id="home">
 				<div class="erling_tm_hero">
 					<div class="container">
 						<div class="content">
@@ -139,7 +165,7 @@
 										<span>
 											<p>Der VW Käferclub Lengenfeld wünscht all seinen<br>
 												Sponsoren, Mitgliedern, Freunden und Unterstützern<br>
-												ein frohes Weihnachtsfest und alles Gute für das Jahr 2027!</p>
+												ein frohes Weihnachtsfest und alles Gute für das Jahr <span class="xmas-year">2027</span>!</p>
 										</span>
 									</div>
 								</div>
@@ -148,10 +174,10 @@
 					</div>
 				</div>
 			</div>
-			 /WEIHNACHTEN -->
+			<!-- /WEIHNACHTEN -->
 
-			<!-- WELCOME -->
-			<div class="erling_tm_section clearfix" id="home">
+			<!-- WELCOME (ausserhalb 20.12.-02.01. sichtbar) -->
+			<div class="erling_tm_section clearfix season-default" id="home">
 				<div class="erling_tm_hero">
 					<div class="container">
 						<div class="content">
